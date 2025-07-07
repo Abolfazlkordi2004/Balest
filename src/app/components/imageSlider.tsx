@@ -3,7 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { Swiper as SwiperType } from "swiper";
 import { Autoplay, EffectFade } from "swiper/modules";
 import SlideContent from "./slideContent";
@@ -12,7 +12,6 @@ type ISliderProps = { images: string[] };
 
 function ImageSlider({ images }: ISliderProps) {
   const swiperRef = useRef<SwiperType | null>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <div className="w-full relative">
@@ -20,21 +19,17 @@ function ImageSlider({ images }: ISliderProps) {
         effect="fade"
         fadeEffect={{ crossFade: true }}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 5000, disableOnInteraction: true }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
-        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        // onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         modules={[Autoplay, EffectFade]}
         className="overflow-hidden"
       >
-        {images.map((src, index) => (
+        {images.map((index) => (
           <SwiperSlide key={index}>
-            <SlideContent
-              key={`${index}-${activeIndex === index ? Date.now() : ""}`}
-              src={src}
-              keyId={index}
-            />
+            <SlideContent key={index} />
             <div className="absolute bottom-0 right-0 -translate-x-18 flex items-center gap-[1px] z-10">
               <button
                 onClick={() => swiperRef.current?.slidePrev()}

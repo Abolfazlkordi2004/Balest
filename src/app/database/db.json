@@ -1,3 +1,20 @@
 {
-  "imageSlide": [{}, {}, {}, {}]
+  "imageSlide": [
+    {
+      "src": "balest/public/img/photo_1.jpg",
+      "text": "شعار ما:تجربه و تخصص و تشخص"
+    },
+    {
+      "src": "balest/public/img/photo_2.jpg",
+      "text": "ارائه خدمات در زمینه راهسازی و سازه و مقاوم سازی و راه اهن و حمل و نقل ترافیک و معماری تاسیسات اب و فاضلاب"
+    },
+    {
+      "src": "balest/public/img/photo_3.jpg",
+      "text": "پروژه هتل پارسیان کرمانشاه"
+    },
+    {
+      "src": "balest/public/img/photo_4.jpg",
+      "text": "شرکت مهندسین مشاور بالست ابنیه"
+    }
+  ]
 }
