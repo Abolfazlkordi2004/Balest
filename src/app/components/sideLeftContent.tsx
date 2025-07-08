@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function SideLeftContent() {
@@ -9,8 +11,22 @@ function SideLeftContent() {
         </p>
       </div>
       <div className="flex flex-col mt-80">
-        <p>1</p>
-        <p>2</p>
+        <Link href="#">
+          <Image
+            src="/icons/icons8-instagram-logo-32.png"
+            alt="instagram"
+            width={25}
+            height={25}
+          />
+        </Link>
+        <Link href="#">
+          <Image
+            src="/icons/icons8-linkedin-48.png"
+            alt="linkedin"
+            width={25}
+            height={25}
+          />
+        </Link>
       </div>
     </div>
   );

@@ -1,12 +1,13 @@
 import React from "react";
-import ImageSlider from "./components/imageSlider";
-
-const slideImage=["/img/photo_1.jpg","/img/photo_2.jpg","/img/photo_3.jpg","/img/photo_4.jpg"]
+// import ImageSlider from "./components/imageSlider";
+import HomePage from "./home/page";
 
 function Main() {
-  return <div>
-    <ImageSlider images={slideImage}/>
-  </div>;
+  return (
+    <div>
+      <HomePage />
+    </div>
+  );
 }
 
 export default Main;
