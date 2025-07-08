@@ -1,6 +1,6 @@
-import React from "react";
 import ImageSlider from "../components/imageSlider";
 import Image from "next/image";
+import ProjectComp from "../components/projectComp";
 
 function HomePage() {
   return (
@@ -53,7 +53,7 @@ function HomePage() {
         <div className="flex flex-col z-10 h-2/3  justify-center items-center">
           <div className="flex justify-end w-250 my-10">
             <h1 className="text-white text-4xl font-bold">شعار ما</h1>
-            <hr className="w-10 text-[#F9A220] font-bold mx-3 mt-8" />
+            <hr className="w-10 border-t-3 border-[#F9A220] mx-3 mt-8" />
           </div>
           <div className="flex flex-row-reverse">
             <div className="flex flex-col items-center justify-center mx-15">
@@ -88,6 +88,13 @@ function HomePage() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex flex-col items-center justify-center">
+        <div className="w-2/3 flex justify-end">
+          <h1 className="text-black text-4xl font-bold"> اخرین پروژه ها</h1>
+          <hr className="w-10 border-t-3 border-[#F9A220] mx-3 mt-8" />
+        </div>
+        <ProjectComp />
       </div>
     </>
   );
