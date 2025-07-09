@@ -133,7 +133,7 @@ function HomePage() {
               <hr className="w-full text-black mt-5" />
             </div>
             <div className="w-[450px] mt-10 text-right">
-              <button className="text-l text-[#F9A220] bg-black opacity-80 w-[70px] h-[40px] cursor-pointer">
+              <button className="text-lg text-[#F9A220] bg-black opacity-80 w-[70px] h-[40px] cursor-pointer">
                 ثبت
               </button>
             </div>
@@ -191,7 +191,6 @@ function HomePage() {
           </div>
         </div>
       </div>
-      
     </>
   );
 }
