@@ -18,33 +18,36 @@ function ProjectComp() {
       .get("http://localhost:3001/projectContent")
       .then((response) => SetData(response.data))
       .catch((error) => console.error(error));
-  }, []); 
+  }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center gap-10 py-10">
+    <div className="flex flex-col justify-center items-center my-5 w-full">
       {data?.map((item, index) => (
         <div
           key={index}
-          className="flex flex-col md:flex-row-reverse items-center w-2/3 gap-10 border-b pb-10"
+          className={`flex w-2/3 items-center gap-10 my-10 ${
+            index % 2 === 0 ? "flex-row-reverse" : "flex-row"
+          }`}
         >
-          <div>
+          <div className="w-[65%]">
             <Link href="#">
               <Image
                 src={item.img}
                 alt="project-image"
-                width={500}
+                width={600}
                 height={400}
-                className="rounded-xl"
+                className="w-full h-auto"
               />
             </Link>
           </div>
-          <div dir="rtl" className="flex flex-col justify-center text-right">
+          <div
+            dir="rtl"
+            className="flex flex-col justify-center w-[35%] text-right"
+          >
             <Link href="#">
               <h1 className="text-3xl font-bold">{item.header}</h1>
             </Link>
-            <p className="text-lg text-gray-700 my-5 leading-relaxed">
-              {item.text}
-            </p>
+            <p className="text-lg text-gray-700 my-5">{item.text}</p>
             <Link href="#">
               <p className="text-base text-[#F9A220] mt-4">بیشتر بخوانید</p>
             </Link>
