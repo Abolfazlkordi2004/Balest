@@ -5,7 +5,7 @@ import React from "react";
 function Footer() {
   return (
     <footer>
-      <div className="w-full h-[400px] bg-black opacity-80 flex flex-row justify-evenly items-center mx-auto">
+      <div className="w-full h-[400px] bg-black opacity-80 flex flex-row justify-center items-start gap-x-25 px-10 flex-nowrap py-15">
         <div>
           <Image
             src="/icons/balest40.jpg"
@@ -14,44 +14,41 @@ function Footer() {
             height={120}
           />
         </div>
-        <div className="flex flex-col" dir="rtl">
-          <h2 className="text-white text-xl my-5">ادرس ما</h2>
 
+        <div className="flex flex-col" dir="rtl">
+          <h2 className="text-white text-xl my-5">آدرس ما</h2>
           <p className="text-white py-2">
-            تهران - خيابان کارگر شمالي - پایین تر از بزرگراه جلال آل احمد
+            تهران - خیابان کارگر شمالی - پایین‌تر از بزرگراه جلال آل احمد
             <br /> خیابان دوم - پلاک 12
           </p>
           <p className="text-white py-2">۸۸۳۵۲۲۱۸</p>
           <p className="text-white py-2">۸۸۳۵۱۱۳۴</p>
           <p className="text-white py-2">info@sazian.net</p>
         </div>
+
         <div dir="rtl">
           <h2 className="text-white text-xl my-5">دسترسی سریع</h2>
           <ul>
-            <Link href="#">
-              <li className="text-white py-2">صفحه اصلی</li>
-            </Link>
-            <Link href="#">
-              <li className="text-white py-2">درباره ما</li>
-            </Link>
-            <Link href="#">
-              <li className="text-white py-2">پروژه ها</li>
-            </Link>
-            <Link href="#">
-              <li className="text-white py-2">خدمات</li>
-            </Link>
-            <Link href="#">
-              <li className="text-white py-2">اخبار</li>
-            </Link>
-            <Link href="#">
-              <li className="text-white py-2">تماس با ما</li>
-            </Link>
+            {[
+              "صفحه اصلی",
+              "درباره ما",
+              "پروژه ها",
+              "خدمات",
+              "اخبار",
+              "تماس با ما",
+            ].map((title, i) => (
+              <Link key={i} href="#">
+                <li className="text-white py-2">{title}</li>
+              </Link>
+            ))}
           </ul>
         </div>
-        <div dir="rtl" className="mb-20">
-          <h2 className="text-white text-xl my-5">کپی رایت</h2>
+
+        <div dir="rtl">
+          <h2 className="text-white text-xl my-5">کپی‌رایت</h2>
           <p className="text-white">
-            © ۲۰۲۰ سازیان. تمامی حقوق محفوظ می باشد. <br /> طراحی توسط شرکت پک
+            © ۲۰۲۰ سازیان. تمامی حقوق محفوظ می‌باشد. <br />
+            طراحی توسط شرکت پک
           </p>
         </div>
       </div>
