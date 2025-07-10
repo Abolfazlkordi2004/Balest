@@ -7,14 +7,15 @@ function Footer() {
     <footer>
       <div className="w-full h-[400px] bg-black opacity-80 flex flex-row justify-center items-start gap-x-25 px-10 flex-nowrap py-15">
         <div>
-          <Image
-            src="/icons/balest40.jpg"
-            alt="logo"
-            width={120}
-            height={120}
-          />
+          <Link href="#">
+            <Image
+              src="/icons/balest40.jpg"
+              alt="logo"
+              width={120}
+              height={120}
+            />
+          </Link>
         </div>
-
         <div className="flex flex-col" dir="rtl">
           <h2 className="text-white text-xl my-5 font-bold">آدرس ما</h2>
           <p className="text-white py-2">
@@ -25,7 +26,6 @@ function Footer() {
           <p className="text-white py-2">۸۸۳۵۱۱۳۴</p>
           <p className="text-white py-2">info@sazian.net</p>
         </div>
-
         <div dir="rtl">
           <h2 className="text-white text-xl my-5 font-bold">دسترسی سریع</h2>
           <ul>
