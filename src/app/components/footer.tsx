@@ -38,7 +38,7 @@ function Footer() {
               "تماس با ما",
             ].map((title, i) => (
               <Link key={i} href="#">
-                <li className="text-white py-2">{title}</li>
+                <li className="text-white py-2 hover:text-[#F9A220]">{title}</li>
               </Link>
             ))}
           </ul>
