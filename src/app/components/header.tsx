@@ -38,9 +38,11 @@ function Header() {
         </div>
         <div className="ml-150">
           <ul className="flex flex-row-reverse gap-5">
-            <li className="hover:text-[#F9A220] text-lg cursor-pointer">
-              صفحه اصلی
-            </li>
+            <Link href="/home">
+              <li className="hover:text-[#F9A220] text-lg cursor-pointer">
+                صفحه اصلی
+              </li>
+            </Link>
             <li
               className="relative cursor-pointer"
               onMouseEnter={() => handleMouseEnter("aboutus")}
