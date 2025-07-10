@@ -38,7 +38,7 @@ function Header() {
         </div>
         <div className="ml-150">
           <ul className="flex flex-row-reverse gap-5">
-            <Link href="/home">
+            <Link href="/Home">
               <li className="hover:text-[#F9A220] text-lg cursor-pointer">
                 صفحه اصلی
               </li>
@@ -96,7 +96,7 @@ function Header() {
             <li className="hover:text-[#F9A220] text-lg cursor-pointer">
               گروه های تخصصی
             </li>
-            <Link href="/services">
+            <Link href="/Services">
               <li className="hover:text-[#F9A220] text-lg cursor-pointer">
                 خدمات
               </li>

@@ -1,6 +1,6 @@
 import React from "react";
 // import ImageSlider from "./components/imageSlider";
-import HomePage from "./home/page";
+import HomePage from "./Home/page";
 
 function Main() {
   return (
