@@ -16,7 +16,7 @@ function Footer() {
         </div>
 
         <div className="flex flex-col" dir="rtl">
-          <h2 className="text-white text-xl my-5">آدرس ما</h2>
+          <h2 className="text-white text-xl my-5 font-bold">آدرس ما</h2>
           <p className="text-white py-2">
             تهران - خیابان کارگر شمالی - پایین‌تر از بزرگراه جلال آل احمد
             <br /> خیابان دوم - پلاک 12
@@ -27,7 +27,7 @@ function Footer() {
         </div>
 
         <div dir="rtl">
-          <h2 className="text-white text-xl my-5">دسترسی سریع</h2>
+          <h2 className="text-white text-xl my-5 font-bold">دسترسی سریع</h2>
           <ul>
             {[
               "صفحه اصلی",
@@ -45,13 +45,14 @@ function Footer() {
         </div>
 
         <div dir="rtl">
-          <h2 className="text-white text-xl my-5">کپی‌رایت</h2>
+          <h2 className="text-white text-xl my-5 font-bold">کپی‌رایت</h2>
           <p className="text-white">
             © ۲۰۲۰ سازیان. تمامی حقوق محفوظ می‌باشد. <br />
             طراحی توسط شرکت پک
           </p>
         </div>
       </div>
+      {/* <div className="fixed bottom-0 bg-white shadow-md w-full mx-[70px] h-[50px]"></div> */}
     </footer>
   );
 }

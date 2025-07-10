@@ -1,8 +1,21 @@
+"use client"
 import ImageSlider from "../components/imageSlider";
 import Image from "next/image";
 import ProjectComp from "../components/projectComp";
+import { useForm } from "react-hook-form";
+
+type FormValues = {
+  Name: string;
+  email: string;
+  text: string;
+};
 
 function HomePage() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormValues>();
   return (
     <>
       <ImageSlider />
@@ -107,89 +120,112 @@ function HomePage() {
           <h1 className="text-4xl font-bold text-right z-10">در تماس باشید</h1>
           <hr className="w-10 border-t-3 border-black mx-3 mt-8" />
         </div>
-        <div className="flex justify-center items-center w-full h-full pb-35">
-          <div className="flex flex-col w-1/2 h-full justify-center items-center z-10">
-            <div className="w-[450px] my-5 relative ">
-              <input
-                type="text"
-                placeholder="نام خود را وارد کنید "
-                className="w-full text-black text-right text-xl placeholder-black focus:outline-none"
-              />
-              <hr className="w-full text-black mt-5" />
+        <form onSubmit={handleSubmit((data) => console.log(data))}>
+          {" "}
+          <div className="flex justify-center items-center w-full h-full pb-35">
+            <div className="flex flex-col w-1/2 h-full justify-center items-center z-10">
+              <div className="w-[450px] my-5 relative ">
+                <input
+                  {...register("Name", { required: "پرکردن نام الزامی است" })}
+                  type="text"
+                  placeholder="نام خود را وارد کنید "
+                  className="w-full text-black text-right text-xl placeholder-black focus:outline-none"
+                />
+                {errors.Name && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.Name.message}
+                  </p>
+                )}
+                <hr className="w-full text-black mt-5" />
+              </div>
+              <div className="w-[450px] my-5 relative ">
+                <input
+                  {...register("email", {
+                    required: "پرکردن ایمیل الزامی است ",
+                  })}
+                  type="email"
+                  placeholder=" ایمیل خود را وارد کنید "
+                  className="w-full text-black text-right text-xl placeholder-black focus:outline-none"
+                />
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.email.message}
+                  </p>
+                )}
+                <hr className="w-full text-black mt-5" />
+              </div>
+              <div className="w-[450px] h-[100px] my-5 relative ">
+                <textarea
+                  {...register("text", { required: "پیغام خوذ وارد کنید " })}
+                  className="w-full h-full text-black text-right text-xl placeholder-black focus:outline-none"
+                  placeholder="پیغام شما"
+                ></textarea>
+                {errors.text && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.text.message}
+                  </p>
+                )}
+                <hr className="w-full text-black mt-5" />
+              </div>
+              <div className="w-[450px] mt-10 text-right">
+                <button className="text-lg text-[#F9A220] bg-black opacity-80 w-[70px] h-[40px] cursor-pointer">
+                  ثبت
+                </button>
+              </div>
             </div>
-            <div className="w-[450px] my-5 relative ">
-              <input
-                type="email"
-                placeholder=" ایمیل خود را وارد کنید "
-                className="w-full text-black text-right text-xl placeholder-black focus:outline-none"
-              />
-              <hr className="w-full text-black mt-5" />
-            </div>
-            <div className="w-[450px] h-[100px] my-5 relative ">
-              <textarea
-                className="w-full h-full text-black text-right text-xl placeholder-black focus:outline-none"
-                placeholder="پیغام شما"
-              ></textarea>
-              <hr className="w-full text-black mt-5" />
-            </div>
-            <div className="w-[450px] mt-10 text-right">
-              <button className="text-lg text-[#F9A220] bg-black opacity-80 w-[70px] h-[40px] cursor-pointer">
-                ثبت
-              </button>
+            <hr className="w-[500px] rotate-90 my-10" />
+            <div className="flex flex-col w-1/2 h-full justify-center items-center z-10">
+              <div className="flex flex-row-reverse w-full gap-10 ">
+                <div className="w-1/4">
+                  <Image
+                    src="/icons/icons8-map-50.png"
+                    alt="map"
+                    width={35}
+                    height={35}
+                  />
+                </div>
+                <div dir="rtl" className="w-3/4">
+                  <h2 className="font-bold text-lg">دفترکار</h2>
+                  <p className="text-lg">
+                    تهران، کارگر شمالی <br /> پایین‌تر از تقاطع جلال آل‌احمد،
+                    پلاک <br />
+                    ۱۲ کد پستی ۸۳۸۴۳ - ۱۴۱۳۶
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-row-reverse w-full gap-10 my-10">
+                <div className="w-1/4">
+                  <Image
+                    src="/icons/icons8-envelope-50.png"
+                    alt="map"
+                    width={35}
+                    height={35}
+                  />
+                </div>
+                <div className="w-3/4" dir="rtl">
+                  <h2 className="font-bold text-lg">ایمیل</h2>
+                  <p className="text-lg">info@sazian.net</p>
+                  <p className="text-lg">support@sazian.net</p>
+                </div>
+              </div>
+              <div className="flex flex-row-reverse w-full gap-10">
+                <div className="w-1/4">
+                  <Image
+                    src="/icons/icons8-phone-50.png"
+                    alt="map"
+                    width={35}
+                    height={35}
+                  />
+                </div>
+                <div className="w-3/4" dir="rtl">
+                  <h2 className="font-bold text-lg">تماس</h2>
+                  <p className="text-lg">۸۸۳۵۲۲۱۸</p>
+                  <p className="text-lg">۸۸۳۵۲۲۳۴</p>
+                </div>
+              </div>
             </div>
           </div>
-          <hr className="w-[500px] rotate-90 my-10" />
-          <div className="flex flex-col w-1/2 h-full justify-center items-center z-10">
-            <div className="flex flex-row-reverse w-full gap-10 ">
-              <div className="w-1/4">
-                <Image
-                  src="/icons/icons8-map-50.png"
-                  alt="map"
-                  width={35}
-                  height={35}
-                />
-              </div>
-              <div dir="rtl" className="w-3/4">
-                <h2 className="font-bold text-lg">دفترکار</h2>
-                <p className="text-lg">
-                  تهران، کارگر شمالی <br /> پایین‌تر از تقاطع جلال آل‌احمد، پلاک{" "}
-                  <br />
-                  ۱۲ کد پستی ۸۳۸۴۳ - ۱۴۱۳۶
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-row-reverse w-full gap-10 my-10">
-              <div className="w-1/4">
-                <Image
-                  src="/icons/icons8-envelope-50.png"
-                  alt="map"
-                  width={35}
-                  height={35}
-                />
-              </div>
-              <div className="w-3/4" dir="rtl">
-                <h2 className="font-bold text-lg">ایمیل</h2>
-                <p className="text-lg">info@sazian.net</p>
-                <p className="text-lg">support@sazian.net</p>
-              </div>
-            </div>
-            <div className="flex flex-row-reverse w-full gap-10">
-              <div className="w-1/4">
-                <Image
-                  src="/icons/icons8-phone-50.png"
-                  alt="map"
-                  width={35}
-                  height={35}
-                />
-              </div>
-              <div className="w-3/4" dir="rtl">
-                <h2 className="font-bold text-lg">تماس</h2>
-                <p className="text-lg">۸۸۳۵۲۲۱۸</p>
-                <p className="text-lg">۸۸۳۵۲۲۳۴</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        </form>
       </div>
     </>
   );
