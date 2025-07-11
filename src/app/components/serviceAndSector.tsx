@@ -9,11 +9,15 @@ type IServiceProps = {
   text: string;
 };
 
-function ServiceComp() {
+type Props = {
+  src: string;
+};
+
+function ServiceAndSectorComp({ src }: Props) {
   const [data, setData] = useState<IServiceProps[]>([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3001/services")
+      .get(src)
       .then((response) => setData(response.data))
       .catch((err) => console.log(err));
   });
@@ -54,4 +58,4 @@ function ServiceComp() {
   );
 }
 
-export default ServiceComp;
+export default ServiceAndSectorComp;
