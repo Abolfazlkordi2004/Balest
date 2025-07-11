@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../components/ui/accordion";
+import ImagePreview from "../components/imagePreview";
 
 function AboutCompany() {
   return (
@@ -40,29 +41,104 @@ function AboutCompany() {
             </p>
           </div>
         </div>
-        <div>
-          <div className="flex flex-col justify-center items-end">
+        <div className="my-24">
+          <div className="flex flex-col justify-center items-end my-2">
             <h2 className="text-4xl font-bold">بیانیه ماموریت</h2>
             <hr className="w-40 border-t-[3px] border-[#F9A220] my-5" />
           </div>
-          <Accordion
-            type="single"
-            collapsible
-            className="w-full max-w-md mx-auto"
-          >
-            <AccordionItem value="item-1">
-              <AccordionTrigger>سوال اول</AccordionTrigger>
-              <AccordionContent>
-                پاسخ مربوط به سوال اول. این متن با کلیک نمایش داده می‌شود.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>سوال دوم</AccordionTrigger>
-              <AccordionContent>
-                پاسخ مربوط به سوال دوم. می‌تونی هر محتوایی بذاری.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+          <div className="flex flex-row-reverse justify-center items-center w-full gap-10">
+            <div className="w-1/2">
+              <Accordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>فلسفه</AccordionTrigger>
+                  <AccordionContent>
+                    باورها ، ارزشهای اخلاقی اصلی ما با معیارهای فدراسیون بین
+                    المللی مشاور FIDIC و فرهنگ غنی ایران اسلامی سازگاری دارد
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>ویژگی های ممتاز</AccordionTrigger>
+                  <AccordionContent>
+                    ما در صدد هستیم با مدیریت زمان و ارتقا و همگرایی توانایی های
+                    کارکنان و مدیران خلاق خود در حرفه مهندس مشاور از بهترین ها
+                    باشیم . محور فعالیت های ما توجه به نیاز های کارفرما ( مشتری
+                    گرائی ) است
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>توجه به انتظارهای مردم</AccordionTrigger>
+                  <AccordionContent>
+                    ما خود را از دیدگاه فرهنگی ، اجتماعی ، اقتصادی و زیست محیطی
+                    در قبال مردم مسئول میدانیم و همواره می کوشیم آثار سوء
+                    احتمالی طرح های عمرانی در ارتباط با زمینه های یاد شده کمینه
+                    گردد
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>توجه به کارکنان</AccordionTrigger>
+                  <AccordionContent>
+                    ما می دانیم که مجموعه ای از عوامل معنوی و مادی برای کارکنان
+                    ایجاد انگیزه می کند ، لذا همواره در پی آنیم تا با مهیا کردن
+                    محیط کاری آرام و سالم ، آموزش حین خدمت و توسعه منابع انسانی
+                    متخصص، توجه به نیاز های معنوی کارکنان ، بهبود مستمر فرآیند
+                    های و فعالیت ها ، پرداخت حقوق مناسب و ارائه مزایای جنبی ،
+                    ضمن ایجاد انگیزه در روحیه برای آنان ، میزان وفاداری ایشان را
+                    نیز بیشینه کنیم
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+            <div className="w-1/2">
+              <Accordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>کارفرمایان</AccordionTrigger>
+                  <AccordionContent>
+                    کارفرمایان ما همه وزارت خانه ها ، استانداریها ، شهرداری ها ،
+                    سازمان ها ، اداره ها و شرکت های دولتی و خصوصی هستند.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>بازارها</AccordionTrigger>
+                  <AccordionContent>
+                    ما می کوشیم در سراسر ایران و کشوره ای عضو سازمان کنفرانس
+                    اسلامی OIC خدمات خود را ارائه کنیم.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>فن آوری</AccordionTrigger>
+                  <AccordionContent>
+                    ما همواره سعی می کنیم با استفاده از فن آوری های روز در حرفه
+                    خود با بکارگیری جدید ترین استاندارد های درون کشوری و برون
+                    کشوری وظایف خویش را به انجام برسانیم .
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>
+                    توجه به بقای رشد و سودآوری
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    سعی ما بر این است که یک سازمان یادگیرنده باشیم تا بتوانیم از
+                    طریق مشارکت به توسعه پایدار دست یابیم . ما خدمات خود را بر
+                    اساس تعرفه های سازمان مدیریت و برنامه ریزی کشور و سایر مراجع
+                    قانونی به کارفرمایان ارائه می کنیم . از اینرو چشمداشت ما به
+                    سود تعیین شده توسط تعرفه های مزبور است .
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-row-reverse items-start gap-10">
+          <div className="flex flex-col justify-center items-end my-2">
+            <h2 className="text-5xl font-bold"> نمودار سازمانی </h2>
+            <p className="text-[18px] my-2 text-gray-600">
+              برای بهتر دیدن بر روی نمودار سازمانی کلیک کنید
+            </p>
+            <hr className="w-40 border-t-[3px] border-[#F9A220] my-5" />
+          </div>
+          <div className="w-[790px] h-[470px] relative overflow-hidden">
+            <ImagePreview src="/img/chart-fa.jpg" alt="photo" width={800} height={800}/>
+          </div>
         </div>
       </div>
     </div>

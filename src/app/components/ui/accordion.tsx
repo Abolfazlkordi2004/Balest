@@ -1,7 +1,6 @@
-// components/ui/accordion.tsx
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { cn } from "@/lib/utils"; // اطمینان حاصل کن این utility هست
+import { cn } from "@/lib/utils";  
 
 const Accordion = AccordionPrimitive.Root;
 
@@ -26,7 +25,7 @@ const AccordionTrigger = React.forwardRef<
       )}
       {...props}
     >
-      <span className="text-right flex-1 px-2"> {children}</span>
+      <span className="text-right text-2xl font-bold flex-1 px-2"> {children}</span>
       <svg
         className="h-8 w-8 shrink-0 transition-transform duration-200"
         viewBox="0 0 24 24"
@@ -44,8 +43,9 @@ const AccordionContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
+    dir="rtl"
     className={cn(
-      "overflow-hidden text-lg transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down text-right",
+      "overflow-hidden text-lg transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down  px-10 text-justify text-gray-700",
       className
     )}
     {...props}
