@@ -117,5 +117,10 @@
       "header": "حمل و نقل و ترافیک",
       "text": "ارائه خدمات مهندسی در حمل و نقل شبکه معابر درون شهری، جاده ای و ریلی"
     }
+  ],
+  "person": [
+    { "img": "/img/1_Od6BBYW.jpg", "name": "A", "text": "B" },
+    { "img": "/img/1_Od6BBYW.jpg", "name": "A", "text": "B" },
+    { "img": "/img/1_Od6BBYW.jpg", "name": "A", "text": "B" }
   ]
 }
