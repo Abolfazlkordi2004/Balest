@@ -1,5 +1,11 @@
 import Image from "next/image";
 import React from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../components/ui/accordion";
 
 function AboutCompany() {
   return (
@@ -33,6 +39,30 @@ function AboutCompany() {
               تخصصی گوناگون توسعه داده است .
             </p>
           </div>
+        </div>
+        <div>
+          <div className="flex flex-col justify-center items-end">
+            <h2 className="text-4xl font-bold">بیانیه ماموریت</h2>
+            <hr className="w-40 border-t-[3px] border-[#F9A220] my-5" />
+          </div>
+          <Accordion
+            type="single"
+            collapsible
+            className="w-full max-w-md mx-auto"
+          >
+            <AccordionItem value="item-1">
+              <AccordionTrigger>سوال اول</AccordionTrigger>
+              <AccordionContent>
+                پاسخ مربوط به سوال اول. این متن با کلیک نمایش داده می‌شود.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>سوال دوم</AccordionTrigger>
+              <AccordionContent>
+                پاسخ مربوط به سوال دوم. می‌تونی هر محتوایی بذاری.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </div>
     </div>
