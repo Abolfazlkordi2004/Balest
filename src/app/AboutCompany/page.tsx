@@ -7,6 +7,7 @@ import {
   AccordionTrigger,
 } from "../components/ui/accordion";
 import ImagePreview from "../components/imagePreview";
+import { Check } from "lucide-react";
 
 function AboutCompany() {
   return (
@@ -128,7 +129,7 @@ function AboutCompany() {
             </div>
           </div>
         </div>
-        <div className="flex flex-row-reverse items-start gap-10">
+        <div className="flex flex-row-reverse items-start gap-10 my-24">
           <div className="flex flex-col justify-center items-end my-2">
             <h2 className="text-5xl font-bold"> نمودار سازمانی </h2>
             <p className="text-[18px] my-2 text-gray-600">
@@ -137,7 +138,200 @@ function AboutCompany() {
             <hr className="w-40 border-t-[3px] border-[#F9A220] my-5" />
           </div>
           <div className="w-[790px] h-[470px] relative overflow-hidden">
-            <ImagePreview src="/img/chart-fa.jpg" alt="photo"/>
+            <ImagePreview src="/img/chart-fa.jpg" alt="photo" />
+          </div>
+        </div>
+      </div>
+      <div className="w-full h-[1200px] bg-[#F9A220] mt-20">
+        <div className="w-[1170px] mx-auto h-full flex flex-col justify-center items-center">
+          <div className="flex flex-row justify-end items-center w-full">
+            <h2 className="text-4xl font-bold">فهرست کارفرمایان</h2>
+            <hr className="w-10 border-t-[3px] border-black mx-2 mt-5" />
+          </div>
+          <div className="grid grid-cols-2 w-full my-10" dir="rtl">
+            <div>
+              <h2 className="text-2xl text-white">
+                درحوزه بنیاد مستضعفان انقلاب اسلامی
+              </h2>
+              <ul className="py-5">
+                <li className="flex gap-5 py-2">
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    سازمان سیاحتی و مراکز تفریحی پارسیان
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    شرکت هتل های بین المللی پارسیان
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    شرکت هتل بین المللی کوثر اصفهان
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">شرکت موج سیاحت</p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-2xl text-white">
+                در حوزه وزارتخانه ها و دستگاه های اجرایی
+              </h2>
+              <ul className="py-5">
+                <li className="flex gap-5 py-2">
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    وزارت راه و شهرسازی ، سازمان ها ، اداره های کل و شرکت های
+                    تابعه
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    وزارت بهداشت ، درمان و علوم پزشکی
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    وزارت آموزش و پرورش ، سازمان نوسازی ، توسعه و تجهیز مدارس
+                    کشور
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-2xl text-white">در حوزه شهرداری ها</h2>
+              <ul className="py-5">
+                <li className="flex gap-5 py-2">
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">شهرداری تهران</p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  {" "}
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    سازمان مشاور فنی و مهندسی تهران
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  {" "}
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    سازمان سرمایه گذاری و مشارکت های مردمی تهران
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  {" "}
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    سازمان زیباسازی شهر تهران
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  {" "}
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    شرکت راه آهن شهری تهران و حومه (مترو )
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  {" "}
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    شرکت اتوبوسرانی تهران و حومه
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  {" "}
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    سازمان مهندسی و عمران شهر تهران
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  {" "}
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    سازمان عمرانی مناطق شهرداری تهران
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  {" "}
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">شرکت یادمان سازه</p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  {" "}
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">شرکت نوسازی عباس آباد</p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  {" "}
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    شهرداری تهران منطقه ۱ ، ۲ ، ۳ ، ۴، ۶ ، ۷ ، ۸ ، ۹ ، ۱۲ ، ۱۴ ،
+                    ۱۷ ، ۱۸ ، ۲۰ ، ۲۱
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  {" "}
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    شهرد اری های کرج ، قم ، کرمانشاه ، سنندج ، ارومیه ، کرمان ،
+                    زاهدان ، بیرجند ، قصر شیرین ، ایلام ، بوکان ، تنکابن
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-2xl text-white">درسایر حوزه ها</h2>
+              <ul className="py-5">
+                <li className="flex gap-5 py-2">
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">سازمان انرژی اتمی ایران</p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    سازمان قطار شهری کرج و حومه
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    شرکت عمران شهر جدید هشتگرد
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    شرکت سهامی نمایشگاه های بین المللی جمهوری اسلامی ایران
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    شرکت فروشگاه های زنجیره ای رفاه استان تهران
+                  </p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">شرکت عضام</p>
+                </li>
+                <li className="flex gap-5 py-2">
+                  <Check className="w-5 h-5 text-black font-bold" />
+                  <p className="text-white text-lg">
+                    سایر کار فرمایان بخش خصوصی
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
