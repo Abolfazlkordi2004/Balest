@@ -1,6 +1,6 @@
 import ServiceComp from "../components/serviceAndSector";
 
-function Services() {
+function Sectors() {
   return (
     <div className="flex flex-col justify-center items-center py-32 gap-20">
       <div className="flex flex-col justify-center items-center">
@@ -12,4 +12,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default Sectors;

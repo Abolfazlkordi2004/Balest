@@ -52,8 +52,8 @@ function Header() {
                 href="#"
                 className={`text-[16px] ${
                   pathname.startsWith("/AboutCompany") ||
-                  pathname.startsWith("/Shareholders") ||
-                  pathname.startsWith("/BoardMembers") ||
+                  pathname.startsWith("/Team") ||
+                  pathname.startsWith("/Members") ||
                   pathname.startsWith("/Certification") ||
                   pathname.startsWith("/Memberships") ||
                   pathname.startsWith("/Commendation")
@@ -68,8 +68,8 @@ function Header() {
                 <ul className="absolute top-full right-0 mt-7 w-60 rounded-sm bg-white shadow-lg z-50">
                   {[
                     { href: "/AboutCompany", text: "درباره ی شرکت" },
-                    { href: "/Shareholders", text: "سهامداران" },
-                    { href: "/BoardMembers", text: "هیئت مدیره و مدیر عامل" },
+                    { href: "/Team", text: "سهامداران" },
+                    { href: "/Members", text: "هیئت مدیره و مدیر عامل" },
                     { href: "/Certification", text: "گواهی صلاحیت ها" },
                     { href: "/Memberships", text: "عضویت ها " },
                     { href: "/Commendation", text: "تقدیرنامه" },
@@ -93,7 +93,7 @@ function Header() {
             <li className="hover:text-[#F9A220] text-lg cursor-pointer">
               پروژه ها
             </li>
-            <Link href="/Sector">
+            <Link href="/Sectors">
               <li className="hover:text-[#F9A220] text-lg cursor-pointer">
                 گروه های تخصصی
               </li>
