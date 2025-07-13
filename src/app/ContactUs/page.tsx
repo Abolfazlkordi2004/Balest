@@ -34,9 +34,14 @@ function ContactUs() {
           className="object-contain object-right right-0 z-0 absolute"
         />
         <form onSubmit={handleSubmit((data) => console.log(data))}>
-          {" "}
           <div className="flex justify-center items-center w-full h-full pb-35">
             <div className="flex flex-col w-1/2 h-full justify-center items-center z-10">
+              <div className="flex justify-end w-full relative my-15">
+                <h1 className="text-4xl font-bold">
+                  ارتباط با ما
+                </h1>
+                <hr className="w-8 border-t-3 border-[#F9A220] mx-3 mt-8" />
+              </div>
               <div className="w-[450px] my-5 relative ">
                 <input
                   {...register("Name", { required: "پرکردن نام الزامی است" })}
@@ -80,7 +85,7 @@ function ContactUs() {
                 )}
                 <hr className="w-full text-black mt-5" />
               </div>
-              <div className="w-[450px] mt-10 text-right">
+              <div className="w-[450px] mt-15 text-right">
                 <button
                   type="submit"
                   className="text-lg text-white font-bold bg-[#F9A220] w-[120px] h-[50px] rounded-3xl cursor-pointer"
@@ -134,7 +139,9 @@ function ContactUs() {
                 </div>
                 <div className="w-3/4" dir="rtl">
                   <h2 className="font-bold text-xl my-4">تماس</h2>
-                  <p className="text-lg font-bold">{toPersianDigits("02177321804")}</p>
+                  <p className="text-lg font-bold">
+                    {toPersianDigits("02177321804")}
+                  </p>
                 </div>
               </div>
             </div>
