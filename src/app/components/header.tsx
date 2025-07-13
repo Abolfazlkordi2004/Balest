@@ -90,9 +90,11 @@ function Header() {
               )}
             </li>
 
-            <li className="hover:text-[#F9A220] text-lg cursor-pointer">
-              پروژه ها
-            </li>
+            <Link href="/Projects">
+              <li className="hover:text-[#F9A220] text-lg cursor-pointer">
+                پروژه ها
+              </li>
+            </Link>
             <Link href="/Sectors">
               <li className="hover:text-[#F9A220] text-lg cursor-pointer">
                 گروه های تخصصی

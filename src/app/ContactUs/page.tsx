@@ -17,16 +17,18 @@ function ContactUs() {
     formState: { errors },
   } = useForm<FormValues>();
   return (
-    <div className="w-full h-full">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d809.5685651099293!2d51.54452308927262!3d35.74406318677965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e1d29cf54f80b%3A0xe8f8c01a45d35198!2z2YXZh9mG2K_Ys9uM2YYg2YXYtNin2YjYsSDYqNin2YTYs9iqINin2KjZhtuM2Yc!5e0!3m2!1sfa!2s!4v1752393352190!5m2!1sfa!2s"
-        className="w-full h-[600px]"
-        style={{ border: 0 }}
-        allowFullScreen
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
-      <div className="w-full h-full overflow-hidden relative px-60 py-20">
+    <div className="w-full h-full ">
+      <div className="py-20 px-[70px]">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d809.5685651099293!2d51.54452308927262!3d35.74406318677965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e1d29cf54f80b%3A0xe8f8c01a45d35198!2z2YXZh9mG2K_Ys9uM2YYg2YXYtNin2YjYsSDYqNin2YTYs9iqINin2KjZhtuM2Yc!5e0!3m2!1sfa!2s!4v1752393352190!5m2!1sfa!2s"
+          className="w-full h-[600px]"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div className="w-full h-full overflow-hidden relative px-60 py-5">
         <Image
           src="/img/pattern-7.png"
           alt="pattern"
@@ -35,14 +37,12 @@ function ContactUs() {
         />
         <form onSubmit={handleSubmit((data) => console.log(data))}>
           <div className="flex justify-center items-center w-full h-full pb-35">
-            <div className="flex flex-col w-1/2 h-full justify-center items-center z-10">
+            <div className="flex flex-col w-1/2 h-full justify-center items-center z-10 gap-10">
               <div className="flex justify-end w-full relative my-15">
-                <h1 className="text-4xl font-bold">
-                  ارتباط با ما
-                </h1>
+                <h1 className="text-4xl font-bold">ارتباط با ما</h1>
                 <hr className="w-8 border-t-3 border-[#F9A220] mx-3 mt-8" />
               </div>
-              <div className="w-[450px] my-5 relative ">
+              <div className="w-[550px] h-[100px] relative ">
                 <input
                   {...register("Name", { required: "پرکردن نام الزامی است" })}
                   type="text"
@@ -56,7 +56,7 @@ function ContactUs() {
                 )}
                 <hr className="w-full text-black mt-5" />
               </div>
-              <div className="w-[450px] my-5 relative ">
+              <div className="w-[550px] h-[100px] relative ">
                 <input
                   {...register("email", {
                     required: "پرکردن ایمیل الزامی است ",
@@ -72,7 +72,7 @@ function ContactUs() {
                 )}
                 <hr className="w-full text-black mt-5" />
               </div>
-              <div className="w-[450px] h-[100px] my-5 relative ">
+              <div className="w-[550px] h-[100px] relative ">
                 <textarea
                   {...register("text", { required: "پیغام خوذ وارد کنید " })}
                   className="w-full h-full text-black text-right text-xl placeholder-black focus:outline-none"
@@ -85,7 +85,7 @@ function ContactUs() {
                 )}
                 <hr className="w-full text-black mt-5" />
               </div>
-              <div className="w-[450px] mt-15 text-right">
+              <div className="w-[550px] h-[100px] mt-10 text-right">
                 <button
                   type="submit"
                   className="text-lg text-white font-bold bg-[#F9A220] w-[120px] h-[50px] rounded-3xl cursor-pointer"
@@ -94,8 +94,8 @@ function ContactUs() {
                 </button>
               </div>
             </div>
-            <div className="flex flex-col w-1/2 h-full justify-center items-center z-10">
-              <div className="flex flex-row-reverse w-full gap-10 ">
+            <div className="flex flex-col w-1/2 h-full justify-center items-center z-10 gap-10">
+              <div className="flex flex-row-reverse w-full gap-10">
                 <div className="w-1/4">
                   <Image
                     src="/icons/icons8-map-50.png"
