@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function Projects() {
@@ -16,8 +17,23 @@ function Projects() {
           <h1 className="text-white text-4xl font-bold">پروژه ها</h1>
         </div>
       </div>
-      <div>
-        
+      <div className="w-full h-full flex justify-center items-center">
+        <div className="flex justify-center items-center my-10">
+          <ul className="flex flex-row justify-center items-center gap-40">
+            <Link href="#">
+              <li className="text-xl hover:text-[#F9A220]">ساختمان </li>
+            </Link>
+            <Link href="#">
+              <li className="text-xl hover:text-[#F9A220]">راه و ازاد راه</li>
+            </Link>
+            <Link href="#">
+              <li className="text-xl hover:text-[#F9A220]">پل</li>
+            </Link>
+          </ul>
+        </div>
+        <div className="grid grid-cols-3">
+
+        </div>
       </div>
     </div>
   );
