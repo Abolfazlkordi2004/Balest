@@ -1,50 +1,67 @@
-"use client"
+"use client";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Autoplay } from "swiper/modules";
+import Image from "next/image";
 
-import Image from "next/image"
-import React, { useState } from "react"
-import Lightbox from "react-image-lightbox"
-import "react-image-lightbox/style.css"
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/autoplay";
 
-export type Props = {
-  img: string[] 
-}
+type Props = {
+  img: string[];
+};
 
-export default function ImageGallery({ img }: Props) {
-  const [isOpen, setIsOpen] = useState(false)
-  const [photoIndex, setPhotoIndex] = useState(0)
-
+const ImageGallery: React.FC<Props> = ({ img }) => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
-      {img.map((src, index) => (
-        <Image
-          key={index}
-          src={src}
-          width={200}
-          height={200}
-          alt={`تصویر ${index + 1}`}
-          className="cursor-pointer shadow"
-          onClick={() => {
-            setPhotoIndex(index)
-            setIsOpen(true)
-          }}
-        />
-      ))}
-
-      {isOpen && (
-        <Lightbox
-          mainSrc={img[photoIndex]}
-          nextSrc={img[(photoIndex + 1) % img.length]}
-          prevSrc={img[(photoIndex + img.length - 1) % img.length]}
-          onCloseRequest={() => setIsOpen(false)}
-          onMovePrevRequest={() =>
-            setPhotoIndex((photoIndex + img.length - 1) % img.length)
-          }
-          onMoveNextRequest={() =>
-            setPhotoIndex((photoIndex + 1) % img.length)
-          }
-          imageTitle={`عکس ${photoIndex + 1}`}
-        />
-      )}
+    <div className="w-full flex justify-center items-center">
+      <Swiper
+        effect="coverflow"
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 200,
+          modifier: 2.5,
+          slideShadows: false,
+        }}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
+        modules={[EffectCoverflow, Autoplay]}
+        className="w-full max-w-5xl px-4 sm:px-6 md:px-10"
+      >
+        {img.map((src, index) => (
+          <SwiperSlide
+            key={index}
+            className="flex justify-center items-center w-[250px] h-[300px]"
+          >
+            <Image
+              src={src}
+              alt={`cert-${index}`}
+              width={300}
+              height={300}
+              className="rounded-xl object-cover shadow-lg transition-all duration-300"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
-  )
-}
+  );
+};
+
+export default ImageGallery;

@@ -68,8 +68,8 @@ function Header() {
                 <ul className="absolute top-full right-0 mt-7 w-60 rounded-sm bg-white shadow-lg z-50">
                   {[
                     { href: "/AboutCompany", text: "درباره ی شرکت" },
-                    { href: "/Team", text: "سهامداران" },
-                    { href: "/Members", text: "هیئت مدیره و مدیر عامل" },
+                    // { href: "/Team", text: "سهامداران" },
+                    // { href: "/Members", text: "هیئت مدیره و مدیر عامل" },
                     { href: "/Certification", text: "گواهی صلاحیت ها" },
                     { href: "/Memberships", text: "عضویت ها " },
                     { href: "/Commendation", text: "تقدیرنامه" },
@@ -149,9 +149,11 @@ function Header() {
               )}
             </li>
 
-            <li className="hover:text-[#F9A220] text-lg cursor-pointer">
-              تماس با ما
-            </li>
+            <Link href="/ContactUs">
+              <li className="hover:text-[#F9A220] text-lg cursor-pointer">
+                تماس با ما
+              </li>
+            </Link>
           </ul>
         </div>
         <div className="text-gray-400">|</div>

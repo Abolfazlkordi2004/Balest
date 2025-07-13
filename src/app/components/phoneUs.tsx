@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import React from "react";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
+import toPersianDigits from "../helper/persian";
 
 type FormValues = {
   Name: string;
@@ -75,7 +76,10 @@ function PhoneUs() {
               <hr className="w-full text-black mt-5" />
             </div>
             <div className="w-[450px] mt-10 text-right">
-              <button type="submit" className="text-lg text-[#F9A220] bg-black opacity-80 w-[70px] h-[40px] cursor-pointer">
+              <button
+                type="submit"
+                className="text-lg text-[#F9A220] bg-black opacity-80 w-[70px] h-[40px] cursor-pointer"
+              >
                 ثبت
               </button>
             </div>
@@ -94,9 +98,10 @@ function PhoneUs() {
               <div dir="rtl" className="w-3/4">
                 <h2 className="font-bold text-lg">دفترکار</h2>
                 <p className="text-lg">
-                  تهران، کارگر شمالی <br /> پایین‌تر از تقاطع جلال آل‌احمد، پلاک{" "}
+                  تهران، تهرانپارس <br /> بلوار پروین نبش
+                  {toPersianDigits("204")} شرقی پلاک {toPersianDigits("36")}
                   <br />
-                  ۱۲ کد پستی ۸۳۸۴۳ - ۱۴۱۳۶
+                  کد پستی {toPersianDigits("165579316")}
                 </p>
               </div>
             </div>
@@ -111,8 +116,7 @@ function PhoneUs() {
               </div>
               <div className="w-3/4" dir="rtl">
                 <h2 className="font-bold text-lg">ایمیل</h2>
-                <p className="text-lg">info@sazian.net</p>
-                <p className="text-lg">support@sazian.net</p>
+                <p className="text-lg">balest.abnieh@gmail.com</p>
               </div>
             </div>
             <div className="flex flex-row-reverse w-full gap-10">
@@ -126,8 +130,8 @@ function PhoneUs() {
               </div>
               <div className="w-3/4" dir="rtl">
                 <h2 className="font-bold text-lg">تماس</h2>
-                <p className="text-lg">۸۸۳۵۲۲۱۸</p>
-                <p className="text-lg">۸۸۳۵۲۲۳۴</p>
+                <p className="text-lg">{toPersianDigits("02177321804")}</p>
+                 
               </div>
             </div>
           </div>
