@@ -5,7 +5,7 @@ import React, { useState } from "react";
 function ProjectSideBar() {
   const [active, setActive] = useState("");
   return (
-    <div className="flex justify-center items-center my-15 w-full h-full">
+    <div className="flex justify-center items-center mt-10 w-full h-full">
       <ul className="flex flex-row justify-center items-center gap-40">
         <li>
           <Link

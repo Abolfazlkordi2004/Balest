@@ -20,6 +20,7 @@ function Projects() {
       </div>
       <div className="w-full h-full flex flex-col justify-center items-center">
         <ProjectSideBar />
+        <hr className="text-gray-400 w-[700px] text-center my-10"/>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-[1500px] px-6 py-10 mx-auto w-full">
           <ProjectDetails />
           <ProjectDetails />

@@ -105,9 +105,11 @@ function Header() {
                 خدمات
               </li>
             </Link>
-            <li className="hover:text-[#F9A220] text-lg cursor-pointer">
-              اخبار
-            </li>
+            <Link href="/News">
+              <li className="hover:text-[#F9A220] text-lg cursor-pointer">
+                اخبار
+              </li>
+            </Link>
 
             <li
               className="relative cursor-pointer"
