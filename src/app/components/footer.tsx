@@ -52,16 +52,16 @@ function Footer() {
           <h2 className="text-white text-xl my-5 font-bold">دسترسی سریع</h2>
           <ul>
             {[
-              "صفحه اصلی",
-              "درباره ما",
-              "پروژه ها",
-              "خدمات",
-              "اخبار",
-              "تماس با ما",
-            ].map((title, i) => (
-              <Link key={i} href="#">
+              { href: "/Home", text: "صفحه اصلی" },
+              { href: "/AboutCompany", text: "درباره ما" },
+              { href: "/Projects", text: "پروژه ها" },
+              { href: "/Services", text: "خدمات" },
+              { href: "/News", text: "اخبار" },
+              { href: "/ContactUs", text: "تماس با ما" },
+            ].map((item, i) => (
+              <Link key={i} href={item.href}>
                 <li className="text-white py-2 hover:text-[#F9A220]">
-                  {title}
+                  {item.text}
                 </li>
               </Link>
             ))}
