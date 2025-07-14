@@ -1,6 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import ProjectSideBar from "../components/projectSideBar";
+import ProjectDetails from "../components/projectDetails";
 
 function Projects() {
   return (
@@ -17,22 +18,15 @@ function Projects() {
           <h1 className="text-white text-4xl font-bold">پروژه ها</h1>
         </div>
       </div>
-      <div className="w-full h-full flex justify-center items-center">
-        <div className="flex justify-center items-center my-10">
-          <ul className="flex flex-row justify-center items-center gap-40">
-            <Link href="#">
-              <li className="text-xl hover:text-[#F9A220]">ساختمان </li>
-            </Link>
-            <Link href="#">
-              <li className="text-xl hover:text-[#F9A220]">راه و ازاد راه</li>
-            </Link>
-            <Link href="#">
-              <li className="text-xl hover:text-[#F9A220]">پل</li>
-            </Link>
-          </ul>
-        </div>
-        <div className="grid grid-cols-3">
-
+      <div className="w-full h-full flex flex-col justify-center items-center">
+        <ProjectSideBar />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-[1500px] px-6 py-10 mx-auto w-full">
+          <ProjectDetails />
+          <ProjectDetails />
+          <ProjectDetails />
+          <ProjectDetails />
+          <ProjectDetails />
+          <ProjectDetails />
         </div>
       </div>
     </div>
