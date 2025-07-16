@@ -128,14 +128,14 @@ function Header() {
               {hoverMenu === "photos" && (
                 <ul className="absolute top-full right-0 mt-7 w-60 rounded-sm bg-white shadow-lg z-50">
                   {[
-                    { href: "/Photos", text: "نمایش همه" },
-                    { href: "/Photos/Road", text: "راهسازی" },
-                    { href: "/Photos/Structure", text: "سازه" },
-                    { href: "/Photos/Strengthening", text: "مقاوم سازی" },
-                    { href: "/Photos/Water", text: "تأسیسات آب و فاضلاب" },
-                    { href: "/Photos/Railway", text: "راه آهن" },
-                    { href: "/Photos/Transport", text: "حمل و نقل و ترافیک" },
-                    { href: "/Photos/Architecture", text: "معماری" },
+                    { href: "/gallery", text: "نمایش همه" },
+                    { href: "/gallery/bridge", text: "راهسازی" },
+                    { href: "/gallery/building", text: "سازه" },
+                    { href: "/gallery/highway", text: "مقاوم سازی" },
+                    { href: "/gallery/highway", text: "تأسیسات آب و فاضلاب" },
+                    { href: "/gallery/building", text: "راه آهن" },
+                    { href: "/gallery/building", text: "حمل و نقل و ترافیک" },
+                    { href: "/gallery/building", text: "معماری" },
                   ].map(({ href, text }) => (
                     <li
                       key={text}

@@ -146,18 +146,44 @@
   "galleryCategory": [
     {
       "slug": "bridge",
-      "img": ["/img/photo_1.jpg", "/img/photo_2.jpg", "/img/photo_3.jpg"]
+      "img": [
+        "/img/photo_1.jpg",
+        "/img/photo_2.jpg",
+        "/img/photo_3.jpg",
+        "/img/photo_3.jpg",
+        "/img/photo_3.jpg"
+      ]
     },
     {
       "slug": "highway",
-      "img": ["/img/photo_1.jpg", "/img/photo_2.jpg", "/img/photo_3.jpg"]
+      "img": [
+        "/img/photo_1.jpg",
+        "/img/photo_2.jpg",
+        "/img/photo_3.jpg",
+        "/img/photo_3.jpg",
+        "/img/photo_3.jpg"
+      ]
     },
     {
       "slug": "building",
-      "img": ["/img/photo_1.jpg", "/img/photo_2.jpg", "/img/photo_3.jpg"]
+      "img": [
+        "/img/photo_1.jpg",
+        "/img/photo_2.jpg",
+        "/img/photo_3.jpg",
+        "/img/photo_3.jpg",
+        "/img/photo_3.jpg"
+      ]
     }
   ],
   "gallery": [
-    { "img": ["/img/photo_1.jpg", "/img/photo_2.jpg", "/img/photo_3.jpg"] }
+    {
+      "img": [
+        "/img/photo_1.jpg",
+        "/img/photo_2.jpg",
+        "/img/photo_3.jpg",
+        "/img/photo_3.jpg",
+        "/img/photo_3.jpg"
+      ]
+    }
   ]
 }
