@@ -1,13 +1,17 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import toPersianDigits from "../helper/persian";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 
 function NewsComp() {
+  const params = useParams();
+  console.log(params.slug)
   return (
     <div className="w-[500px] h-full flex flex-col justify-center items-end">
       <div className="w-full h-[500px] relative overflow-hidden">
-        <Link href="#">
+        <Link href={`/News/1`}>
           <Image
             src="/img/photo_1.jpg"
             alt="Image"
@@ -19,7 +23,7 @@ function NewsComp() {
       <h2 className="w-full text-black text-right my-1 text-xl">
         {toPersianDigits("1400/1/1")}
       </h2>
-      <Link href="#">
+      <Link href={`/News/${params.slug}`}>
         <h1 className="w-full text-black text-right my-1 font-bold text-2xl">
           افتتاح پروژه قم
         </h1>
@@ -28,12 +32,14 @@ function NewsComp() {
         مراسم افتتاح پروژه قم
       </p>
       <div className="w-[200px] h-[100px] text-right my-5">
-        <button
-          type="submit"
-          className="text-lg text-white font-bold bg-[#F9A220] w-[120px] h-[50px] rounded-2xl cursor-pointer"
-        >
-          ثبت
-        </button>
+        <Link href={`/News/${params.slug}`}>
+          <button
+            type="submit"
+            className="text-lg text-white font-bold bg-[#F9A220] w-[120px] h-[50px] rounded-3xl cursor-pointer"
+          >
+            ادامه
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -35,9 +35,10 @@ function GalleryCategory() {
   }, [params?.slug]);
 
   return (
-    <div className="w-full flex justify-center items-center py-40">
-      <div>
-        <p>{params?.slug}</p>
+    <div className="w-full flex flex-col justify-center items-center py-30">
+      <div className="flex flex-col justify-center items-end py-5 w-full px-44">
+        <h2 className="text-4xl font-bold">نگارخانه</h2>
+        <hr className="w-14 border-t-[3px] border-[#F9A220] my-5" />
       </div>
       <Swiper
         effect="coverflow"

@@ -185,5 +185,33 @@
         "/img/photo_3.jpg"
       ]
     }
+  ],
+  "NewsDetails": [
+    {
+      "slug": "1",
+      "date": "1400/1/1",
+      "header": "مراسم افتتاح پروژه قم",
+      "text": "مراسم افتتاح پروژه قم",
+      "img": [
+        "/img/photo_1.jpg",
+        "/img/photo_2.jpg",
+        "/img/photo_3.jpg",
+        "/img/photo_3.jpg",
+        "/img/photo_3.jpg"
+      ]
+    },
+    {
+      "slug": "2",
+      "date": "1400/1/1",
+      "header": "مراسم افتتاح پروژه قم",
+      "text": "مراسم افتتاح پروژه قم",
+      "img": [
+        "/img/photo_1.jpg",
+        "/img/photo_2.jpg",
+        "/img/photo_3.jpg",
+        "/img/photo_3.jpg",
+        "/img/photo_3.jpg"
+      ]
+    }
   ]
 }
