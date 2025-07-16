@@ -1,44 +1,45 @@
-"use client"
-import Link from "next/link";
-import React, { useState } from "react";
+// components/ProjectSideBar.tsx
+"use client";
+import React from "react";
+type Props = {
+  active: "building" | "highway" | "bridge";
+  setActive: (category: "building" | "highway" | "bridge") => void;
+};
 
-function ProjectSideBar() {
-  const [active, setActive] = useState("");
+
+function ProjectSideBar({ active, setActive }: Props) {
   return (
     <div className="flex justify-center items-center mt-10 w-full h-full">
       <ul className="flex flex-row justify-center items-center gap-40">
         <li>
-          <Link
-            href="#building"
+          <button
             onClick={() => setActive("building")}
             className={`text-xl hover:text-[#F9A220] ${
               active === "building" ? "text-[#F9A220]" : ""
             }`}
           >
             ساختمان
-          </Link>
+          </button>
         </li>
         <li>
-          <Link
-            href="#highway"
+          <button
             onClick={() => setActive("highway")}
             className={`text-xl hover:text-[#F9A220] ${
               active === "highway" ? "text-[#F9A220]" : ""
             }`}
           >
-            راه و ازادراه
-          </Link>
+            راه و آزادراه
+          </button>
         </li>
         <li>
-          <Link
-            href="#bridge"
+          <button
             onClick={() => setActive("bridge")}
             className={`text-xl hover:text-[#F9A220] ${
               active === "bridge" ? "text-[#F9A220]" : ""
             }`}
           >
             پل
-          </Link>
+          </button>
         </li>
       </ul>
     </div>
