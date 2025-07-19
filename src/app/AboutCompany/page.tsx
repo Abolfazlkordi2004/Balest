@@ -137,8 +137,8 @@ function AboutCompany() {
             </p>
             <hr className="w-40 border-t-[3px] border-[#F9A220] my-5" />
           </div>
-          <div className="w-[790px] h-[600px] relative overflow-hidden">
-            <ImagePreview src="/img/chart.jpg" alt="photo" />
+          <div>
+            <ImagePreview src="/img/chart.jpg" alt="photo" height={600} width={850}/>
           </div>
         </div>
       </div>

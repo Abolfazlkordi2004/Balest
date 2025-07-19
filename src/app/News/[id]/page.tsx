@@ -1,6 +1,6 @@
 "use client";
+import ImagePreview from "@/app/components/imagePreview";
 import axios from "axios";
-import Image from "next/image";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
@@ -14,12 +14,13 @@ type INewsDetailsProps = {
 
 function NewsDetails() {
   const params = useParams();
+
   const [data, setData] = useState<INewsDetailsProps[]>([]);
   useEffect(() => {
-    const slug = params?.slug;
+    const slug = params.id;
     if (slug && typeof slug === "string") {
       axios
-        .get<INewsDetailsProps[]>("http://localhost:3001/galleryCategory")
+        .get<INewsDetailsProps[]>("http://localhost:3001/NewsDetails")
         .then((res) => {
           const result = res.data.find((item) => item.slug === slug);
           if (result) {
@@ -32,28 +33,27 @@ function NewsDetails() {
           console.error("Error fetching branch data:", error);
         });
     }
-  }, [params?.slug]);
+  }, [params.id]);
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center py-30 text-right">
       {data.map((item, index) => (
         <div key={index}>
-          <h2>{item.date}</h2>
-          <h1>{item.header}</h1>
-          <p>اخبار درون سازمانی</p>
+          <h2 className="text-[#F9A220] text-xl">{item.date}</h2>
+          <h1 className="text-3xl font-bold py-4">{item.header}</h1>
+          <p className="text-gray-500 text-xl font-bold py-4">
+            اخبار درون سازمانی
+          </p>
           <hr />
-          <p>{item.text}</p>
-          <div className="flex flex-row justify-center items-center">
-            <div>
+          <p className="text-gray-500 text-xl py-4">{item.text}</p>
+          <div>
+            <div className="flex flex-row gap-4">
               {item.img.map((item, indexImg) => (
-                <div
-                  key={indexImg}
-                  className="w-[150px] h-[150px] relative overflow-hidden"
-                >
-                  <Image
+                <div key={indexImg}>
+                  <ImagePreview
                     src={item}
                     alt="images"
-                    fill
-                    className="object-cover"
+                    width={250}
+                    height={250}
                   />
                 </div>
               ))}

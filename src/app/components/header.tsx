@@ -131,11 +131,11 @@ function Header() {
                     { href: "/gallery", text: "نمایش همه" },
                     { href: "/gallery/bridge", text: "راهسازی" },
                     { href: "/gallery/building", text: "سازه" },
-                    { href: "/gallery/highway", text: "مقاوم سازی" },
-                    { href: "/gallery/highway", text: "تأسیسات آب و فاضلاب" },
-                    { href: "/gallery/building", text: "راه آهن" },
-                    { href: "/gallery/building", text: "حمل و نقل و ترافیک" },
-                    { href: "/gallery/building", text: "معماری" },
+                    // { href: "/gallery/highway", text: "مقاوم سازی" },
+                    // { href: "/gallery/highway", text: "تأسیسات آب و فاضلاب" },
+                    // { href: "/gallery/building", text: "راه آهن" },
+                    // { href: "/gallery/building", text: "حمل و نقل و ترافیک" },
+                    // { href: "/gallery/building", text: "معماری" },
                   ].map(({ href, text }) => (
                     <li
                       key={text}
