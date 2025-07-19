@@ -35,7 +35,7 @@ function ServiceAndSectorComp({ src }: Props) {
             <div className="flex flex-col justify-center items-end w-[65%] h-full px-10">
               <h2 className="text-3xl font-bold">{item.header}</h2>
               <hr className="w-10 border-t-[2px] border-[#F9A220] my-2" />
-              <p className="py-5 text-right">{item.text}</p>
+              <p className="py-5 text-right text-lg">{item.text}</p>
             </div>
           </div>
         ) : (
@@ -49,7 +49,7 @@ function ServiceAndSectorComp({ src }: Props) {
             <div className="flex flex-col justify-center items-end w-[65%] h-full px-10">
               <h2 className="text-3xl font-bold text-white">{item.header}</h2>
               <hr className="w-10 border-t-[2px] border-[#F9A220] my-2" />
-              <p className="py-5 text-right text-white">{item.text}</p>
+              <p className="py-5 text-right text-white text-lg">{item.text}</p>
             </div>
           </div>
         )

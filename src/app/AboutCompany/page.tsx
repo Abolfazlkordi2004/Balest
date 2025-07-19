@@ -27,13 +27,13 @@ function AboutCompany() {
             <hr className="w-14 border-t-[3px] border-[#F9A220] my-5" />
           </div>
           <div dir="rtl">
-            <p className="text-gray-700 mb-10 text-lg text-justify">
+            <p className="text-gray-700 mb-10 text-xl text-justify">
               مهندسین مشاور سازیان در سال ۱۳۶۹ خورشیدی پایه گذاری شد. این شرکت
               طی سالیان گذشته در زمینه های گوناگون مهندسی عمران فعالیت داشته و
               پروژه های بسیاری را از مراحل مطالعاتی تا تحویل قطعی پس از ساخت، به
               انجام رسانده است .
             </p>
-            <p className="text-gray-700 text-justify text-lg">
+            <p className="text-gray-700 text-justify text-xl">
               اکنون این مهندسین مشاور با تخصص های گوناگون، خدمات مشاوره و مدیریت
               طرح را به بخشهای دولتی و خصوصی ارائه می دهد. هدف اصلی شرکت، مشارکت
               در برنامه های عمرانی و توسعه پایدار کشور و ارتقا کیفیت خدمات حرفه

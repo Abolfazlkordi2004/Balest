@@ -50,7 +50,7 @@ function Header() {
             >
               <Link
                 href="#"
-                className={`text-[16px] ${
+                className={` ${
                   pathname.startsWith("/AboutCompany") ||
                   pathname.startsWith("/Team") ||
                   pathname.startsWith("/Members") ||
@@ -76,7 +76,7 @@ function Header() {
                   ].map(({ href, text }) => (
                     <li
                       key={text}
-                      className="px-4 py-2 text-gray-700 hover:text-[#F9A220] text-right whitespace-nowrap text-2xl"
+                      className="px-4 py-2 text-gray-700 hover:text-[#F9A220] text-right whitespace-nowrap text-xl"
                     >
                       <Link
                         href={href}
@@ -118,7 +118,7 @@ function Header() {
             >
               <Link
                 href="#"
-                className={`text-[16px] ${
+                className={` ${
                   pathname.startsWith("/photos") ? "text-[#F9A220]" : ""
                 } hover:text-[#F9A220] text-xl`}
               >
@@ -139,7 +139,7 @@ function Header() {
                   ].map(({ href, text }) => (
                     <li
                       key={text}
-                      className="px-4 py-2 text-gray-700 hover:text-[#F9A220] text-right whitespace-nowrap text-2xl"
+                      className="px-4 py-2 text-gray-700 hover:text-[#F9A220] text-right whitespace-nowrap text-xl"
                     >
                       <Link
                         href={href}

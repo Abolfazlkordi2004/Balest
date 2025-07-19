@@ -64,7 +64,7 @@ function PhoneUs() {
             </div>
             <div className="w-[450px] h-[100px] my-5 relative ">
               <textarea
-                {...register("text", { required: "پیغام خوذ وارد کنید " })}
+                {...register("text", { required: "پیغام خود وارد کنید " })}
                 className="w-full h-full text-black text-right text-xl placeholder-black focus:outline-none"
                 placeholder="پیغام شما"
               ></textarea>
@@ -97,7 +97,7 @@ function PhoneUs() {
               </div>
               <div dir="rtl" className="w-3/4">
                 <h2 className="font-bold text-xl">دفترکار</h2>
-                <p className="text-lg">
+                <p className="text-xl">
                   تهران، تهرانپارس <br /> بلوار پروین نبش
                   {toPersianDigits("204")} شرقی پلاک {toPersianDigits("36")}
                   <br />

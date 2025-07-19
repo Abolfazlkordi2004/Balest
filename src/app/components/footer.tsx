@@ -41,11 +41,11 @@ function Footer() {
         </div>
         <div className="flex flex-col" dir="rtl">
           <h2 className="text-white text-2xl my-5 font-bold">آدرس ما</h2>
-          <p className="text-white py-2 text-lg">
+          <p className="text-white py-2 text-xl">
             تهران تهرانپارس بلوار پروین نبش {toPersianDigits("204")} پلاک{" "}
             {toPersianDigits("36")} واحد {toPersianDigits("2")}
           </p>
-          <p className="text-white py-2">{toPersianDigits("02177321804")}</p>
+          <p className="text-white py-2 text-xl">{toPersianDigits("02177321804")}</p>
           <p className="text-white py-2">balest.abnieh@gmail.com</p>
         </div>
         <div dir="rtl">
@@ -60,7 +60,7 @@ function Footer() {
               { href: "/ContactUs", text: "تماس با ما" },
             ].map((item, i) => (
               <Link key={i} href={item.href}>
-                <li className="text-white py-2 hover:text-[#F9A220] text-lg">
+                <li className="text-white py-2 hover:text-[#F9A220] text-xl">
                   {item.text}
                 </li>
               </Link>
@@ -70,7 +70,7 @@ function Footer() {
 
         <div dir="rtl">
           <h2 className="text-white text-2xl my-5 font-bold">کپی‌رایت</h2>
-          <p className="text-white text-lg">
+          <p className="text-white text-xl">
             © بالست ابنیه. تمامی حقوق محفوظ می‌باشد. <br />
           </p>
         </div>
