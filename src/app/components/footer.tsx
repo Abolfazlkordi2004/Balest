@@ -6,7 +6,7 @@ import toPersianDigits from "../helper/persian";
 function Footer() {
   return (
     <footer>
-      <div className="w-full h-[400px] bg-black opacity-80 flex flex-row justify-center items-start gap-x-25 px-10 flex-nowrap py-15">
+      <div className="w-full h-[450px] bg-black opacity-80 flex flex-row justify-center items-start gap-x-25 px-10 flex-nowrap py-20">
         <div className="flex flex-col justify-center items-center">
           <div>
             <Link href="#">
@@ -40,8 +40,8 @@ function Footer() {
           </div>
         </div>
         <div className="flex flex-col" dir="rtl">
-          <h2 className="text-white text-xl my-5 font-bold">آدرس ما</h2>
-          <p className="text-white py-2">
+          <h2 className="text-white text-2xl my-5 font-bold">آدرس ما</h2>
+          <p className="text-white py-2 text-lg">
             تهران تهرانپارس بلوار پروین نبش {toPersianDigits("204")} پلاک{" "}
             {toPersianDigits("36")} واحد {toPersianDigits("2")}
           </p>
@@ -49,7 +49,7 @@ function Footer() {
           <p className="text-white py-2">balest.abnieh@gmail.com</p>
         </div>
         <div dir="rtl">
-          <h2 className="text-white text-xl my-5 font-bold">دسترسی سریع</h2>
+          <h2 className="text-white text-2xl my-5 font-bold">دسترسی سریع</h2>
           <ul>
             {[
               { href: "/Home", text: "صفحه اصلی" },
@@ -60,7 +60,7 @@ function Footer() {
               { href: "/ContactUs", text: "تماس با ما" },
             ].map((item, i) => (
               <Link key={i} href={item.href}>
-                <li className="text-white py-2 hover:text-[#F9A220]">
+                <li className="text-white py-2 hover:text-[#F9A220] text-lg">
                   {item.text}
                 </li>
               </Link>
@@ -69,8 +69,8 @@ function Footer() {
         </div>
 
         <div dir="rtl">
-          <h2 className="text-white text-xl my-5 font-bold">کپی‌رایت</h2>
-          <p className="text-white">
+          <h2 className="text-white text-2xl my-5 font-bold">کپی‌رایت</h2>
+          <p className="text-white text-lg">
             © بالست ابنیه. تمامی حقوق محفوظ می‌باشد. <br />
           </p>
         </div>

@@ -30,7 +30,7 @@ body {
 @font-face {
   font-family: "Nazanin";
   src: url("/Fonts/Far_Nazanin.ttf") format("truetype");
-  font-weight: normal;
+  font-weight:normal;
   font-style: normal;
 }
 

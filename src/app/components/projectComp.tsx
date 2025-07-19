@@ -45,11 +45,11 @@ function ProjectComp() {
             className="flex flex-col justify-center w-[35%] text-right"
           >
             <Link href="#">
-              <h1 className="text-3xl font-bold">{item.header}</h1>
+              <h1 className="text-4xl font-bold">{item.header}</h1>
             </Link>
             <p className="text-lg text-gray-700 my-5">{item.text}</p>
             <Link href="#">
-              <p className="text-base text-[#F9A220] mt-4">بیشتر بخوانید</p>
+              <p className="text-[#F9A220] text-lg mt-4">بیشتر بخوانید</p>
             </Link>
           </div>
         </div>

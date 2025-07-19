@@ -96,7 +96,7 @@ function PhoneUs() {
                 />
               </div>
               <div dir="rtl" className="w-3/4">
-                <h2 className="font-bold text-lg">دفترکار</h2>
+                <h2 className="font-bold text-xl">دفترکار</h2>
                 <p className="text-lg">
                   تهران، تهرانپارس <br /> بلوار پروین نبش
                   {toPersianDigits("204")} شرقی پلاک {toPersianDigits("36")}
@@ -115,7 +115,7 @@ function PhoneUs() {
                 />
               </div>
               <div className="w-3/4" dir="rtl">
-                <h2 className="font-bold text-lg">ایمیل</h2>
+                <h2 className="font-bold text-xl">ایمیل</h2>
                 <p className="text-lg">balest.abnieh@gmail.com</p>
               </div>
             </div>
@@ -129,8 +129,8 @@ function PhoneUs() {
                 />
               </div>
               <div className="w-3/4" dir="rtl">
-                <h2 className="font-bold text-lg">تماس</h2>
-                <p className="text-lg">{toPersianDigits("02177321804")}</p>
+                <h2 className="font-bold text-xl">تماس</h2>
+                <p className="text-lg font-bold">{toPersianDigits("02177321804")}</p>
                  
               </div>
             </div>

@@ -39,7 +39,7 @@ function Header() {
         <div className="ml-150">
           <ul className="flex flex-row-reverse gap-5">
             <Link href="/Home">
-              <li className="hover:text-[#F9A220] text-lg cursor-pointer">
+              <li className="hover:text-[#F9A220] text-xl cursor-pointer">
                 صفحه اصلی
               </li>
             </Link>
@@ -59,7 +59,7 @@ function Header() {
                   pathname.startsWith("/Commendation")
                     ? "text-[#F9A220]"
                     : ""
-                } hover:text-[#F9A220] text-lg`}
+                } hover:text-[#F9A220] text-xl`}
               >
                 درباره ی ما
               </Link>
@@ -76,7 +76,7 @@ function Header() {
                   ].map(({ href, text }) => (
                     <li
                       key={text}
-                      className="px-4 py-2 text-gray-700 hover:text-[#F9A220] text-right whitespace-nowrap text-[16px]"
+                      className="px-4 py-2 text-gray-700 hover:text-[#F9A220] text-right whitespace-nowrap text-2xl"
                     >
                       <Link
                         href={href}
@@ -91,22 +91,22 @@ function Header() {
             </li>
 
             <Link href="/Projects">
-              <li className="hover:text-[#F9A220] text-lg cursor-pointer">
+              <li className="hover:text-[#F9A220] text-xl cursor-pointer">
                 پروژه ها
               </li>
             </Link>
             <Link href="/Sectors">
-              <li className="hover:text-[#F9A220] text-lg cursor-pointer">
+              <li className="hover:text-[#F9A220] text-xl cursor-pointer">
                 گروه های تخصصی
               </li>
             </Link>
             <Link href="/Services">
-              <li className="hover:text-[#F9A220] text-lg cursor-pointer">
+              <li className="hover:text-[#F9A220] text-xl cursor-pointer">
                 خدمات
               </li>
             </Link>
             <Link href="/News">
-              <li className="hover:text-[#F9A220] text-lg cursor-pointer">
+              <li className="hover:text-[#F9A220] text-xl cursor-pointer">
                 اخبار
               </li>
             </Link>
@@ -120,7 +120,7 @@ function Header() {
                 href="#"
                 className={`text-[16px] ${
                   pathname.startsWith("/photos") ? "text-[#F9A220]" : ""
-                } hover:text-[#F9A220] text-lg`}
+                } hover:text-[#F9A220] text-xl`}
               >
                 نگارخانه
               </Link>
@@ -139,7 +139,7 @@ function Header() {
                   ].map(({ href, text }) => (
                     <li
                       key={text}
-                      className="px-4 py-2 text-gray-700 hover:text-[#F9A220] text-right whitespace-nowrap text-[16px]"
+                      className="px-4 py-2 text-gray-700 hover:text-[#F9A220] text-right whitespace-nowrap text-2xl"
                     >
                       <Link
                         href={href}
@@ -154,7 +154,7 @@ function Header() {
             </li>
 
             <Link href="/ContactUs">
-              <li className="hover:text-[#F9A220] text-lg cursor-pointer">
+              <li className="hover:text-[#F9A220] text-xl cursor-pointer">
                 تماس با ما
               </li>
             </Link>
