@@ -2,7 +2,7 @@ import React from "react";
 
 function sideRightContent() {
   return (
-    <div className="fixed right-0 top-[75px] z-40 h-full w-[70px] bg-white shadow-md"></div>
+    <div className="hidden md:block md:fixed right-0 top-[75px] z-40 h-full w-[70px] bg-white shadow-md"></div>
   );
 }
 

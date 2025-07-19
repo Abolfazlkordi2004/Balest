@@ -12,8 +12,8 @@ function HomePage() {
       <Studio/>
       {/* <Specilzation/> */}
       <div className="flex flex-col items-center justify-center py-20">
-        <div className="w-2/3 flex justify-end">
-          <h1 className="text-black text-4xl font-bold"> اخرین پروژه ها</h1>
+        <div className="w-full md:w-2/3 flex justify-end">
+          <h1 className="text-black text-4xl font-bold text-nowrap"> اخرین پروژه ها</h1>
           <hr className="w-10 border-t-3 border-[#F9A220] mx-3 mt-8" />
         </div>
         <ProjectComp />

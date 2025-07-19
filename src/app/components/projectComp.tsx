@@ -25,11 +25,11 @@ function ProjectComp() {
       {data?.map((item, index) => (
         <div
           key={index}
-          className={`flex w-2/3 items-center gap-10 my-10 ${
-            index % 2 === 0 ? "flex-row-reverse" : "flex-row"
+          className={`flex flex-col w-full md:w-2/3 items-center gap-10 my-10 ${
+            index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
           }`}
         >
-          <div className="w-[65%]">
+          <div className="w-full md:w-[65%] px-10">
             <Link href="#">
               <Image
                 src={item.img}
@@ -42,12 +42,12 @@ function ProjectComp() {
           </div>
           <div
             dir="rtl"
-            className="flex flex-col justify-center w-[35%] text-right"
+            className="flex flex-col justify-center md:w-[35%] w-full px-10 text-right"
           >
             <Link href="#">
               <h1 className="text-4xl font-bold">{item.header}</h1>
             </Link>
-            <p className="text-lg text-gray-700 my-5">{item.text}</p>
+            <p className="text-xl text-justify leading-loose text-gray-700 my-5 w-full">{item.text}</p>
             <Link href="#">
               <p className="text-[#F9A220] text-lg mt-4">بیشتر بخوانید</p>
             </Link>
